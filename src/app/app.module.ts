@@ -1,25 +1,28 @@
-import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { QuestionService } from './services/question.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { QuizItemsComponent } from './quizItems/quizItems.component';
+import { QuizItemDetailComponent } from './quizItem-detail/quizItem-detail.component';
+import { QuizService } from './quiz.service';
+import { NewQuizItemComponent } from './new-quiz-item/new-quiz-item.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QuizItemsComponent,
+    QuizItemDetailComponent,
+    NewQuizItemComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     FormsModule,
-    NgbModule.forRoot()
+    HttpClientModule
   ],
   providers: [
-    QuestionService
+    QuizService
   ],
   bootstrap: [AppComponent]
 })
