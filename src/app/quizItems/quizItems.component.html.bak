@@ -1,0 +1,26 @@
+<div *ngIf="quizItems" class="quiz-container">
+  <div class="quiz">
+  <label name=quizItem class="quizItem" *ngFor="let quizItem of quizItems">
+      <div class="slide">
+        <div class="question">
+          <input [(ngModel)]="quizItem.question" placeholder="question">
+        </div>
+        <div class="answers">
+          <input [(ngModel)]="quizItem.answers" placeholder="answers">
+        </div>
+        <div class="correct">
+          <input [(ngModel)]="quizItem.correct" placeholder="correct">
+        </div>
+        <div class="section">
+          <input [(ngModel)]="quizItem.section" placeholder="section">
+        </div>
+        <div class="items">
+          <input [(ngModel)]="quizItem.status" placeholder="active">
+        </div>
+      </div>
+  </label>
+      <button id="previous">Previous Question</button>
+      <button id="next">Next Question</button>
+      <button id="submit">Submit Quiz</button>
+       <div id="results"></div>
+</div>

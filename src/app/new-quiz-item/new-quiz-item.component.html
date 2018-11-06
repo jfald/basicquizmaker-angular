@@ -1,0 +1,27 @@
+
+<h3>New Quiz Item</h3>
+<div>
+     <form>
+      <div class="form-row">
+        <div class="col-md-5">
+          <input type="text" name="question" id="question" [(ngModel)]="newQuizItem.question" placeholder="question" class="form-control">
+      </div>
+
+      <div class="col-md-5">
+        <input type="text" name="answers" id="answers" [(ngModel)]="newQuizItem.answers" placeholder="answers" class="form-control">
+      </div>
+      <div class="col-md-5">
+        <input name="correct" id="correct" [(ngModel)]="newQuizItem.correct" placeholder="correct" class="form-control">
+      </div>
+      <div class="col-md-5">
+        <input name="section" id="section" [(ngModel)]="newQuizItem.section" placeholder="section" class="form-control">
+      </div>
+      <div class="col-md-5">
+        <input name="status" id="status" [(ngModel)]="newQuizItem.status" placeholder="status" class="form-control">
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary" (click)="create()">Add</button>
+      </div>
+    </div>
+  </form>
+</div>
